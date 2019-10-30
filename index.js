@@ -8,16 +8,24 @@ function instance(system, id, config) {
 	// super-constructor
 	instance_skel.apply(this, arguments);
 
-	self.actions(); // export actions
-
 	return self;
 }
+
+instance.prototype.CHOICES_predefined = [
+	{ id: 'predefined1', label: 'Predefined Message #1'},
+	{ id: 'predefined2', label: 'Predefined Message #2'},
+	{ id: 'predefined3', label: 'Predefined Message #3'},
+	{ id: 'predefined4', label: 'Predefined Message #4'},
+	{ id: 'predefined5', label: 'Predefined Message #5'}
+];
 
 instance.prototype.updateConfig = function(config) {
 	var self = this;
 
 	self.config = config;
 
+	self.buildPredefinedArray();
+	
 	self.actions();
 }
 
@@ -28,6 +36,20 @@ instance.prototype.init = function() {
 
 	debug = self.debug;
 	log = self.log;
+	
+	self.buildPredefinedArray();
+	
+	self.actions(); // export actions
+}
+
+instance.prototype.buildPredefinedArray = function() {
+	var self = this;
+	
+	self.CHOICES_predefined[0].label = self.config.predefined1;
+	self.CHOICES_predefined[1].label = self.config.predefined2;
+	self.CHOICES_predefined[2].label = self.config.predefined3;
+	self.CHOICES_predefined[3].label = self.config.predefined4;
+	self.CHOICES_predefined[4].label = self.config.predefined5;
 }
 
 // Return config fields for web config
@@ -98,14 +120,8 @@ instance.prototype.actions = function(system) {
 					type: 'dropdown',
 					label: 'Message',
 					id: 'message',
-					default: '',
-					choices: [
-						{id: 'predefined1', label: 'Predefined Message #1'},
-						{id: 'predefined2', label: 'Predefined Message #2'},
-						{id: 'predefined3', label: 'Predefined Message #3'},
-						{id: 'predefined4', label: 'Predefined Message #4'},
-						{id: 'predefined5', label: 'Predefined Message #5'}
-					]
+					default: 'predefined1',
+					choices: self.CHOICES_predefined
 				}
 			]
 		},
