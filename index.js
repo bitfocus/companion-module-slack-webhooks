@@ -122,7 +122,7 @@ class SlackInstance extends InstanceBase {
 				],
 				callback: (action) => {
 					let body = {
-						text: this.CHOICES_predefined[action.options.message],
+						text: this.CHOICES_predefined.find((x) => x.id === action.options.message).label,
 					}
 					this.sendSlack(body)
 				},
