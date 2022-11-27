@@ -132,14 +132,17 @@ class SlackInstance extends InstanceBase {
 				options: [
 					{
 						type: 'textinput',
+						useVariables: true,
 						label: 'Message',
 						id: 'message',
 						default: '',
 					},
 				],
-				callback: (action) => {
+				callback: async (action) => {
+					const value = await this.parseVariablesInString(action.options.message)
+
 					let body = {
-						text: action.options.message,
+						text: value,
 					}
 					this.sendSlack(body)
 				},
