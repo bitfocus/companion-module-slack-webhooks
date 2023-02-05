@@ -4,7 +4,7 @@
 	"main": "index.js",
 	"type": "module",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"format": "prettier -w ."
 	},
 	"repository": {
 		"type": "git",
@@ -12,10 +12,11 @@
 	},
 	"license": "MIT",
 	"dependencies": {
-		"@companion-module/base": "~1.0.2",
+		"@companion-module/base": "~1.1.1",
 		"node-fetch": "^3.3.0"
 	},
 	"devDependencies": {
-		"@companion-module/tools": "^0.4.1"
-	}
+		"@companion-module/tools": "^1.0.0"
+	},
+	"prettier": "@companion-module/tools/.prettierrc.json"
 }
