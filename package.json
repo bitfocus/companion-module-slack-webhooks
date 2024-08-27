@@ -1,6 +1,6 @@
 {
 	"name": "slack-webhooks",
-	"version": "2.0.5",
+	"version": "2.0.6",
 	"main": "index.js",
 	"type": "module",
 	"scripts": {
@@ -12,7 +12,7 @@
 	},
 	"license": "MIT",
 	"dependencies": {
-		"@companion-module/base": "~1.7.0",
+		"@companion-module/base": "~1.10.0",
 		"node-fetch": "^3.3.2"
 	},
 	"devDependencies": {
