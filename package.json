@@ -1,6 +1,6 @@
 {
 	"name": "slack-webhooks",
-	"version": "3.0.0",
+	"version": "3.0.1",
 	"main": "dist/main.js",
 	"type": "module",
 	"scripts": {
@@ -19,25 +19,25 @@
 	},
 	"license": "MIT",
 	"dependencies": {
-		"@companion-module/base": "~1.11.3",
-		"@slack/webhook": "^7.0.4"
+		"@companion-module/base": "~1.12.1",
+		"@slack/webhook": "^7.0.5"
 	},
 	"devDependencies": {
-		"@companion-module/tools": "^2.1.1",
-		"@types/node": "^22.10.2",
-		"eslint": "^9.17.0",
+		"@companion-module/tools": "^2.3.0",
+		"@types/node": "^22.16.5",
+		"eslint": "^9.31.0",
 		"husky": "^9.1.7",
-		"lint-staged": "^15.2.11",
-		"prettier": "^3.4.2",
+		"lint-staged": "^15.5.2",
+		"prettier": "^3.6.2",
 		"rimraf": "^6.0.1",
-		"typescript": "^5.7.2",
-		"typescript-eslint": "^8.18.2"
+		"typescript": "^5.8.3",
+		"typescript-eslint": "^8.38.0"
 	},
 	"engines": {
 		"node": "^22.12"
 	},
 	"prettier": "@companion-module/tools/.prettierrc.json",
-	"packageManager": "yarn@4.5.3",
+	"packageManager": "yarn@4.9.2",
 	"lint-staged": {
 		"*.{css,json,md,scss}": [
 			"prettier --write"
