@@ -1,6 +1,6 @@
 {
 	"name": "slack-webhooks",
-	"version": "3.0.0",
+	"version": "3.0.1",
 	"main": "dist/main.js",
 	"type": "module",
 	"scripts": {
@@ -37,7 +37,7 @@
 		"node": "^22.12"
 	},
 	"prettier": "@companion-module/tools/.prettierrc.json",
-	"packageManager": "yarn@4.5.3",
+	"packageManager": "yarn@4.9.2",
 	"lint-staged": {
 		"*.{css,json,md,scss}": [
 			"prettier --write"
