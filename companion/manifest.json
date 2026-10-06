@@ -1,4 +1,6 @@
 {
+	"$schema": "../node_modules/@companion-module/base/assets/manifest.schema.json",
+	"type": "connection",
 	"id": "slack-webhooks",
 	"name": "slack-webhooks",
 	"shortname": "slack",
@@ -26,5 +28,5 @@
 	},
 	"manufacturer": "Slack",
 	"products": ["Webhooks"],
-	"keywords": ["Webhooks"]
+	"keywords": ["messaging", "dm", "webhook", "workflow", "business"]
 }
